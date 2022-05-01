@@ -24,7 +24,7 @@ pub mod coffre_solana {
         Ok(())
     }
 
-    pub fn update_password(ctx: Context<SavePassword>, name: String, path: String, ciphertext: String) -> Result<()> {
+    pub fn update_password(ctx: Context<UpdatePassword>, name: String, path: String, ciphertext: String) -> Result<()> {
         let password: &mut Account<Password> = &mut ctx.accounts.password;
         if name.chars().count() > 20 {
             return Err(ErrorCode::NameTooLong.into())
