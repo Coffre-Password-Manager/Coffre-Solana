@@ -8,9 +8,4 @@ describe("coffre-solana", () => {
 
   const program = anchor.workspace.CoffreSolana as Program<CoffreSolana>;
 
-  it("Is initialized!", async () => {
-    // Add your test here.
-    const tx = await program.methods.initialize().rpc();
-    console.log("Your transaction signature", tx);
-  });
 });
