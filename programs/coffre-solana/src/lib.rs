@@ -66,6 +66,7 @@ pub struct UpdatePassword<'info> {
 pub struct DeletePassword<'info> {
     #[account(mut, has_one = owner, close = owner)]
     pub password: Account<'info, Password>,
+    #[account(mut)]
     pub owner: Signer<'info>,
 }
 
