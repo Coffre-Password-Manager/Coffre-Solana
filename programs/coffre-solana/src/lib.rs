@@ -92,7 +92,7 @@ impl Password {
         + STRING_LENGTH_PREFIX + MAX_CIPHERTEXT_LENGTH;
 }
 
-#[error]
+#[error_code]
 pub enum ErrorCode {
     #[msg("The provided name should be 20 characters long maximum.")]
     NameTooLong,
